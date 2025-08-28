@@ -1,51 +1,51 @@
 # Networking Notes
 
 ## Networking
-**DHCP** (Dynamic Host Configuration Protocol)␣␣ 
-What DHCP does:␣␣
-When a device (client) joins a network:␣␣
-IP Address Assignment␣␣ 
-Subnet Mask␣␣ 
-Default Gateway␣␣ 
-DNS Server(s)␣␣
+**DHCP** (Dynamic Host Configuration Protocol) 
+What DHCP does:  
+When a device (client) joins a network:  
+IP Address Assignment   
+Subnet Mask   
+Default Gateway   
+DNS Server(s)  
 
 ## DHCP Process (DORA):
 **Discover**
 The client (new device) broadcasts a DHCP Discover message.
 
 **Offer**
-A DHCP server on the network responds with a DHCP Offer.
-The offer includes:
-Available IP address
-Subnet mask
-Gateway
-DNS servers
-Lease time
+A DHCP server on the network responds with a DHCP Offer.  
+The offer includes:  
+Available IP address  
+Subnet mask  
+Gateway  
+DNS servers  
+Lease time  
 
 **Request**
 The client replies with a DHCP Request to the server.
 
 **Acknowledge**
-The server sends a DHCP Acknowledgment (ACK).
+The server sends a DHCP Acknowledgment (ACK).  
 
 A DHCP relay agent forwards DHCP requests and responses between clients on
-different subnets and a DHCP server
+different subnets and a DHCP server  
 
 ## NAT (Network Address Translation)
-It allows multiple devices on a private network to access the internet using one public IP address.
+It allows multiple devices on a private network to access the internet using one public IP address.  
 
-1-**Static NAT (One-to-One NAT)**
-Maps one private IP to one public IP.
+1-**Static NAT (One-to-One NAT)**  
+Maps one private IP to one public IP.  
 
-2-**Dynamic NAT (Many-to-Many NAT)**
-Maps private IPs to a pool of public IPs dynamically.
+2-**Dynamic NAT (Many-to-Many NAT)**  
+Maps private IPs to a pool of public IPs dynamically.  
 
-3-**PAT** (Port Address Translation) aka NAT Overload
-Maps many private IPs to a single public IP, but differentiates them using port numbers.
+3-**PAT** (Port Address Translation) aka NAT Overload   
+Maps many private IPs to a single public IP, but differentiates them using port numbers.  
 
-**NAT64** (Network Address Translation 64) is a translation mechanism that allows IPv6-only clients to communicate with IPv4-only servers.
+**NAT64** (Network Address Translation 64) is a translation mechanism that allows IPv6-only clients to communicate with IPv4-only servers.  
 
-**ARP** (Address Resolution Protocol) maps IP addresses to MAC addresses
+**ARP** (Address Resolution Protocol) maps IP addresses to MAC addresses  
 
 **Default gateway** is the router that connects devices in a local network to external
 networks 
