@@ -9,11 +9,11 @@ Subnet Mask
 Default Gateway 
 DNS Server(s)
 
-DHCP Process (DORA):
-Discover
+## DHCP Process (DORA):
+**Discover**
 The client (new device) broadcasts a DHCP Discover message.
 
-Offer
+**Offer**
 A DHCP server on the network responds with a DHCP Offer.
 The offer includes:
 Available IP address
@@ -22,62 +22,62 @@ Gateway
 DNS servers
 Lease time
 
-Request
+**Request**
 The client replies with a DHCP Request to the server.
 
-Acknowledge
+**Acknowledge**
 The server sends a DHCP Acknowledgment (ACK).
 
 A DHCP relay agent forwards DHCP requests and responses between clients on
 different subnets and a DHCP server
-----------------------------------------------------------------------------------
+
 ## NAT (Network Address Translation)
 It allows multiple devices on a private network to access the internet using one public IP address.
 
-1-Static NAT (One-to-One NAT)
+1-**Static NAT (One-to-One NAT)**
 Maps one private IP to one public IP.
 
-2-Dynamic NAT (Many-to-Many NAT)
+2-**Dynamic NAT (Many-to-Many NAT)**
 Maps private IPs to a pool of public IPs dynamically.
 
-3-PAT (Port Address Translation) aka NAT Overload
+3-**PAT** (Port Address Translation) aka NAT Overload
 Maps many private IPs to a single public IP, but differentiates them using port numbers.
 
-NAT64 (Network Address Translation 64) is a translation mechanism that allows IPv6-only clients to communicate with IPv4-only servers.
--------------------------------------------------------------------------------
+**NAT64** (Network Address Translation 64) is a translation mechanism that allows IPv6-only clients to communicate with IPv4-only servers.
+
 **ARP** (Address Resolution Protocol) maps IP addresses to MAC addresses
 
-Default gateway is the router that connects devices in a local network to external
+**Default gateway** is the router that connects devices in a local network to external
 networks 
---------------------------------------------------------------------------------
-routing table : data structure stored in a router (or computer) that tells it where to forward network packets.
+
+**routing table** : data structure stored in a router (or computer) that tells it where to forward network packets.
 routing table contains information about routes and paths that routers use to
 determine the best path for forwarding data to its destination.
 
-Contents of a Routing Table :
+**Contents of a Routing Table :**
 Destination Network
 Subnet Mask 
 Gateway
 Interface
 Metric → Cost/priority of the route (lower = preferred).
 
-diff between static & dynamic routing ?
+**diff between static & dynamic routing ?**
 Static routing involves manually configuring routes, while dynamic routing
 protocols like OSPF and EIGRP automatically update routing tables based on
 network changes.
 
-OSPF (Open Shortest Path First) is a link-state routing protocol that calculates the
+**OSPF (Open Shortest Path First)** is a link-state routing protocol that calculates the
 shortest path to reach network destinations using the SPF (Shortest Path First)
 algorithm.
 
 A default route (0.0.0.0/0) is used by routers to send traffic to a next-hop router
 when no specific route exists in the routing table.
-------------------------------------------------------------------------------
-Subnetting is the process of dividing a large network (IP block) into smaller, more manageable sub-networks (subnets).
 
-A trunk port is a switch port that carries traffic for multiple VLANs across a single physical link.
+**Subnetting** is the process of dividing a large network (IP block) into smaller, more manageable sub-networks (subnets).
 
-HSRP (Hot Standby Router Protocol)
+A **trunk port** is a switch port that carries traffic for multiple VLANs across a single physical link.
+
+**HSRP (Hot Standby Router Protocol)**
 HSRP is a Cisco proprietary protocol that provides gateway redundancy at Layer 3.
 Multiple routers can work together to appear as a single virtual router.
 Standardized alternative: VRRP (Virtual Router Redundancy Protocol, RFC 5798).
@@ -107,7 +107,7 @@ The 7 Layers of OSI
 ## 7. Application Layer (User Interface)
 
 Examples of Application Layer Protocols
-HTTP / HTTPS → (HyperText Transfer Protocol)
+**HTTP / HTTPS** → (HyperText Transfer Protocol)
 used for transferring hypertext (web pages) between web servers and browsers.
 Default Port: 80.
 HTTPS (HyperText Transfer Protocol Secure)
@@ -115,57 +115,59 @@ Secure version of HTTP.
 Adds TLS/SSL encryption on top of HTTP.
 Default Port: 443.
  
-FTP / SFTP → file transfer protocol
-FTP 
+**FTP / SFTP → file transfer protocol**
+
+**FTP** 
 Transfer files between client ↔ server.
 20 (data) → for file transfer (active mode).
 21 (control) → for commands (login, ls, cd, put, get).
 
-SFTP (SSH File Transfer Protocol / Secure FTP)
+**SFTP (SSH File Transfer Protocol / Secure FTP)**
  Not the same as FTPS!
 Purpose: Secure file transfer, built on SSH (Secure Shell).
 Port: 22 (same as SSH).
 
-SMTP, POP3, IMAP → email.
+**SMTP, POP3, IMAP → email.**
 
-MTP vs IMAP vs POP3
-SMTP → Simple Mail Transfer Protocol.
+**MTP vs IMAP vs POP3**
+**SMTP** → Simple Mail Transfer Protocol.
 Default port: 25
 For sending emails (outgoing)
 send emails between clients and servers.
-POP3 (Port 110/995) →
+
+**POP3 (Port 110/995)** →
 Post Office Protocol version 3
 For downloading emails (usually removes from server).
-IMAP (Port 143/993) → 
+
+**IMAP (Port 143/993)** → 
 Internet Message Access Protocol
 For syncing emails across devices (keeps messages on server).
 
-DNS → name resolution (domain → IP).
+**DNS** → name resolution (domain → IP).
 
-SNMP → 
+**SNMP** 
 Simple Network Management Protocol.
 network management.
 Used to monitor and manage network devices (routers, switches, servers, printers, etc.).
 
-Telnet / SSH → remote login.
-Telnet : Port: 23 (TCP).
-SSH : port 22 (TCP)
+**Telnet / SSH** → remote login.
+**Telnet** : Port: 23 (TCP).
+**SSH** : port 22 (TCP)
 
----------------------------------------------------------------------------------
 ## 6. Presentation Layer (Data Translation)
 Ensures data is in a readable format for applications.
 Handles encryption, compression, encoding.
-----------------------------------------------------------------------------------
+
 ## 5.Session Layer (Connection Management)
 Establishes, maintains, and terminates sessions between devices.
-----------------------------------------------------------------------------------
+
 ## 4. Transport Layer (End-to-End Delivery)
 Ensures reliable data delivery.
 End-to-End Delivery
 Flow Control
 Error Detection & Correction
 
-TCP (Transmission Control Protocol)
+**TCP (Transmission Control Protocol)**
 Connection-oriented (3-way handshake).
 Reliable: guarantees delivery, order, and error recovery.
 Full duplex
@@ -177,26 +179,26 @@ SYN-ACK (synchronize + acknowledge) → Server → Client
 ACK (acknowledge) → Client → Server
 Now connection is established → data transfer can start.
 
-UDP (User Datagram Protocol)
+**UDP (User Datagram Protocol)**
 Connectionless.
 Unreliable: no guarantee of delivery or order.
 Best effort
 
-data  :Segment (TCP) / Datagram (UDP)
-----------------------------------------------------------------------------------
+data unit:Segment (TCP) / Datagram (UDP)
+
 ## 3. Network Layer (Logical Addressing & Routing)
 
 Main Functions:
-Logical Addressing → Assigns IP addresses (IPv4/IPv6).
-Routing → Finds the best path for data from source to destination.
-Packet Forwarding → Moves packets across multiple networks
-Fragmentation & Reassembly → Splits packets if they’re too large for the data link layer.
+**Logical Addressing** → Assigns IP addresses (IPv4/IPv6).
+**Routing** → Finds the best path for data from source to destination.
+**Packet Forwarding** → Moves packets across multiple networks
+**Fragmentation & Reassembly** → Splits packets if they’re too large for the data link layer.
 Protocols at Network Layer:
-IP (Internet Protocol) → IPv4, IPv6 (core protocol).
+**IP (Internet Protocol)** → IPv4, IPv6 (core protocol).
 
-ICMP (Internet Control Message Protocol) → Ping, Traceroute.
+**ICMP (Internet Control Message Protocol)** → Ping, Traceroute.
 
-IGMP (Internet Group Management Protocol) :
+**IGMP (Internet Group Management Protocol)** :
 Used by hosts and routers to manage multicast group memberships.
 Unicast → one-to-one communication.
 Broadcast → one-to-all communication.
@@ -204,16 +206,16 @@ Multicast → one-to-many communication
 
 ARP (Address Resolution Protocol) → Maps IP → MAC (though technically works between Layer 2 & 3).
 data: packet
-----------------------------------------------------------------------------------
+
 ## 2. Data Link Layer (MAC & Switching)
 Responsible for node-to-node delivery on the same network.
 Switches work at the Data Link Layer
 Data Unit: Frame
-----------------------------------------------------------------------------------
+
 ## 1. Physical Layer (Bits & Media)
 Lowest layer → sends raw bits (0s and 1s) over the physical medium.
 Data Unit: bits
-----------------------------------------------------------------------------------
+
 ## IP Address Classes (A–E)
 IPv4 addresses are divided into 5 classes based on the first octet (first 8 bits).
 ## 1. Class A
@@ -256,10 +258,10 @@ Auto configuration IP address
 Rang : 169.254.X.X
 Subnet Mask: 255.255.0.0
 Gateway: No default gateway assigned (so can’t reach outside the local LAN).
------------------------------------------------------------------------------
-Private IPs = for internal networks only (10.x.x.x, 172.16–31.x.x, 192.168.x.x).
+
+**Private IPs** = for internal networks only (10.x.x.x, 172.16–31.x.x, 192.168.x.x).
 They save public IP space and require NAT to access the internet.
------------------------------------------------------------------------------
+
 
 **Port Numbers** 
 Well Known ports
@@ -271,6 +273,6 @@ to avoid duplication
 
 Dynamic ports
 Range from 49,152 to 65,535 are neither controlled nor registered
------------------------------------------------------------------------------
-Socket Address = IP + Port number
+
+**Socket Address** = IP + Port number
 URL is Universal Resource Locator
