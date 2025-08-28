@@ -1,13 +1,13 @@
 # Networking Notes
 
 ## Networking
-**DHCP** (Dynamic Host Configuration Protocol) 
-What DHCP does:
-When a device (client) joins a network:
-IP Address Assignment 
-Subnet Mask 
-Default Gateway 
-DNS Server(s)
+**DHCP** (Dynamic Host Configuration Protocol)␣␣ 
+What DHCP does:␣␣
+When a device (client) joins a network:␣␣
+IP Address Assignment␣␣ 
+Subnet Mask␣␣ 
+Default Gateway␣␣ 
+DNS Server(s)␣␣
 
 ## DHCP Process (DORA):
 **Discover**
